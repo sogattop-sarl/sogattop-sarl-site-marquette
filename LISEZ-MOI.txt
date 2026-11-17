@@ -1,0 +1,12 @@
+SOGATTOP SARL — site vitrine initial
+1. Ouvrir index.html dans un navigateur pour prévisualiser le site.
+2. Pour le publier gratuitement, créer un compte sur GitHub, déposer index.html dans un nouveau dépôt, puis activer GitHub Pages dans Settings > Pages.
+3. Connecter ensuite le site à Google Search Console et créer une fiche Google Business Profile.
+4. Créer la page Facebook depuis le compte officiel de l'entreprise et ajouter son URL au site.
+À CONFIRMER AVANT PUBLICATION :
+- Adresse e-mail professionnelle (non intégrée car l'adresse communiquée précédemment semble incomplète).
+- Adresse physique complète si l'entreprise souhaite l'afficher.
+- Photos authentiques des chantiers et équipements.
+- URL de la page Facebook une fois créée.
+Le site utilise actuellement le numéro WhatsApp +241 66 44 74 96.
+Le formulaire de contact n'est pas inclus : le bouton ouvre une conversation WhatsApp.
