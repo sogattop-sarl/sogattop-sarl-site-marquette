@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr">
-<head><meta name="google-site-verification" content="m_hrQvRPsLHfrp4oK8h3R9q72Yem0_blIsEHidJ-dxw" />
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SOGATTOP SARL | Bureau d'études topographiques et bathymétriques au Gabon</title>
@@ -23,7 +23,22 @@
     "telephone":"+24166447496",
     "knowsAbout":["Topographie","Bathymétrie","Levé GNSS","Station totale","Nivellement","Traitement de données géospatiales"]
   }
-  </script>
+  </script>const menuButton = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav");
+  if (menuButton && nav) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "×" : "☰";
+    });
+    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.textContent = "☰";
+    }));
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+  
 </head><meta name="google-site-verification" content="m_hrQvRPsLHfrp4oK8h3R9q72Yem0_blIsEHidJ-dxw" />
 <body>
   <header class="site-header">
@@ -38,7 +53,6 @@
       </nav>
     </div>
   </header>
-
   <main>
     <section class="hero" id="accueil">
       <div class="hero-shade"></div>
