@@ -1,178 +1,250 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SOGATTOP SARL | Bureau d'études topographiques et bathymétriques au Gabon</title>
-  <meta name="description" content="SOGATTOP SARL, bureau d'études à Libreville au Gabon : topographie, bathymétrie, levés GNSS, station totale, nivellement, traitement et cartographie des données.">
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#10283f">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="SOGATTOP SARL | Topographie, bathymétrie et traitement de données">
-  <meta property="og:description" content="Des solutions de mesure, de terrain et de traitement de données pour vos projets au Gabon.">
-  <meta property="og:locale" content="fr_GA">
-  <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfessionalService",
-    "name":"SOGATTOP SARL",
-    "description":"Bureau d'études spécialisé en topographie, bathymétrie et traitement de données.",
-    "address":{"@type":"PostalAddress","addressLocality":"Libreville","addressCountry":"GA"},
-    "areaServed":{"@type":"Country","name":"Gabon"},
-    "telephone":"+24166447496",
-    "knowsAbout":["Topographie","Bathymétrie","Levé GNSS","Station totale","Nivellement","Traitement de données géospatiales"]
-  }
-  </script>const menuButton = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".nav");
-  if (menuButton && nav) {
-    menuButton.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("open");
-      menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuButton.textContent = isOpen ? "×" : "☰";
-    });
-    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-      nav.classList.remove("open");
-      menuButton.setAttribute("aria-expanded", "false");
-      menuButton.textContent = "☰";
-    }));
-  }
-  document.getElementById("year").textContent = new Date().getFullYear();
-  
-</head><meta name="google-site-verification" content="m_hrQvRPsLHfrp4oK8h3R9q72Yem0_blIsEHidJ-dxw" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOGATTOP SARL | Topographie, géodésie, bathymétrie et BTP à Libreville, Gabon</title>
+<meta name="description" content="SOGATTOP SARL, entreprise gabonaise de topographie, géodésie & GNSS, bathymétrie, suivi de travaux BTP et études à Libreville. Demandez un devis.">
+<meta name="keywords" content="topographie Gabon, géomètre Libreville, géodésie, GNSS, bathymétrie, BTP, implantation, nivellement, SOGATTOP">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SOGATTOP SARL – La précision au cœur de vos projets">
+<meta property="og:description" content="Topographie, géodésie, bathymétrie et travaux BTP au Gabon.">
+<meta property="og:locale" content="fr_GA">
+<!-- Remplacez par l'adresse réelle du site : -->
+<link rel="canonical" href="https://www.votre-domaine.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"SOGATTOP SARL","description":"Topographie, géodésie, bathymétrie et travaux BTP","telephone":"+24166447496","email":"Abdoulayetraore18@yahoo.fr","address":{"@type":"PostalAddress","addressLocality":"Libreville","addressCountry":"GA"}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d2240;--navy2:#0a1a31;--gold:#f2a900;--ink:#142238;--bg:#f4f6fa;--card:#fff;--line:#dfe5ee;--muted:#51607a}
+@media (prefers-color-scheme:dark){:root{--bg:#0c1522;--card:#14233a;--ink:#eaf0f8;--line:#243752;--muted:#a3b2c9}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:Barlow,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+h1,h2,h3,.logo b{font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;line-height:1.1}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1180px;margin:auto;padding:0 20px}
+.top{background:var(--navy2);color:#fff;font-size:14px}
+.top .wrap{display:flex;gap:22px;align-items:center;justify-content:space-between;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.top div{display:flex;gap:20px;flex-wrap:wrap}
+.top i{color:var(--gold);font-style:normal}
+.top em{color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:17px}
+header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 12px #0002}
+header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;color:var(--navy)}
+.logo svg{width:52px;height:52px;flex:none}
+.logo b{font-size:34px;font-weight:800;letter-spacing:.5px}.logo b span{color:var(--gold)}
+.logo small{display:block;font-style:italic;font-size:12px;color:var(--navy);font-weight:500}
+nav{display:flex;gap:2px;align-items:center}
+nav a{padding:10px 12px;color:var(--navy);font-weight:600;font-size:15px;border-radius:6px}
+nav a:hover{background:#eef2f8}
+nav a.on{background:var(--gold)}
+.burger{display:none;background:var(--navy);color:#fff;border:0;border-radius:6px;font-size:22px;padding:6px 12px}
+.hero{background:linear-gradient(90deg,#0a1a31ee 0%,#0d2240cc 48%,#0d224055 100%),linear-gradient(135deg,#1c4a7a,#2f7d6b);background-image:linear-gradient(90deg,#0a1a31ee 0%,#0d2240cc 48%,#0d224066 100%),url(images/hero.jpg);background-size:cover;background-position:center;color:#fff;padding:80px 0 88px}
+.hero h1{font-size:clamp(46px,8vw,86px);font-weight:800}
+.hero h1 span{color:var(--gold)}
+.hero h2{font-size:clamp(28px,4.4vw,46px);font-weight:700;margin-top:4px}
+.hero h2 em{color:var(--gold)}
+.hero hr{width:120px;border:0;height:4px;background:var(--gold);margin:22px 0}
+.hero p{font-size:clamp(18px,2.4vw,24px);max-width:540px;line-height:1.3}
+.btns{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:40px;font-weight:700;font-size:17px;border:2px solid var(--gold);cursor:pointer;font-family:inherit}
+.btn.g{background:var(--gold);color:var(--navy2)}
+.btn.o{background:#0a1a31aa;color:#fff;border-color:#fff}
+.btn.o small{display:block;font-size:12px;font-weight:500;line-height:1.1}
+.sec{padding:56px 0}
+.title{display:flex;align-items:center;gap:20px;margin-bottom:30px}
+.title:before,.title:after{content:"";height:3px;flex:1;background:var(--gold)}
+.title h2{font-size:clamp(30px,4vw,40px);font-weight:700;text-align:center}
+.grid5{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-align:center;box-shadow:0 4px 14px #0001}
+.ph{aspect-ratio:16/10;background:linear-gradient(135deg,#1c4a7a,#2f7d6b);position:relative;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph.empty:after{content:"Photo à ajouter";position:absolute;inset:0;display:grid;place-items:center;color:#ffffffcc;font-size:14px}
+.card h3{font-size:22px;margin-top:14px}
+.card p{padding:2px 14px 18px;font-size:15px;color:var(--muted)}
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;align-items:center}
+.about .ph{aspect-ratio:4/3;border-radius:12px}
+.about h2{font-size:36px;margin-bottom:10px}
+.about p{margin-bottom:12px}
+.atouts{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;margin-top:34px}
+.atouts h2{text-align:center;font-size:32px;margin-bottom:18px}
+.atouts ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;text-align:center}
+.atouts li{padding:6px;font-weight:600}
+.atouts li span{display:block;font-size:34px;color:var(--navy)}
+@media (prefers-color-scheme:dark){.atouts li span{color:var(--gold)}}
+.atouts li small{display:block;font-weight:400;color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.gal figure{background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.gal figcaption{padding:10px 14px;font-size:15px;font-weight:600}
+.note{background:#fff7e0;color:#4a3a00;border-left:5px solid var(--gold);padding:12px 16px;border-radius:6px;margin-bottom:22px;font-size:15px}
+.eq{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.eq .card{text-align:left;padding:20px}
+.eq h3{margin:0 0 6px;font-size:23px}
+.cform{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+form{display:grid;gap:12px}
+input,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;font:inherit;background:var(--card);color:var(--ink)}
+.cinfo p{margin:8px 0}
+footer{background:var(--navy2);color:#e6edf7;padding:36px 0 0}
+.fg{display:grid;grid-template-columns:1.3fr 1fr 1.2fr 1.3fr;gap:26px;align-items:start}
+footer h4{font-size:17px;margin-bottom:8px;color:#fff}
+footer ul{list-style:none;padding:0;font-size:15px;line-height:1.9}
+footer li:before{content:"› ";color:var(--gold)}
+.slogan{background:var(--gold);color:var(--navy2);padding:16px 20px;border-radius:8px;font-weight:600}
+.soc{display:flex;gap:10px;margin-top:12px}
+.soc a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:14px}
+.copy{border-top:1px solid #ffffff22;margin-top:30px;padding:14px 0;font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.copy em{color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-size:17px}
+@media(max-width:960px){
+ .burger{display:block}
+ nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:10px 20px;box-shadow:0 8px 14px #0003}
+ nav.open{display:flex}
+ .about,.cform,.fg{grid-template-columns:1fr}
+ .logo small{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#accueil" aria-label="SOGATTOP SARL - Accueil">
-        <img class="brand-logo" src="assets/logo-sogattop.svg" alt="Logo SOGATTOP SARL">
-      </a>
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-      <nav class="nav" aria-label="Navigation principale">
-        <a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#services">Nos services</a>
-        <a href="#methodes">Nos moyens</a><a href="#contact" class="nav-cta">Nous contacter</a>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section class="hero" id="accueil">
-      <div class="hero-shade"></div>
-      <div class="container hero-content">
-        <p class="eyebrow">BUREAU D'ÉTUDES · LIBREVILLE, GABON</p>
-        <h1>La précision du terrain.<br><span>La maîtrise des données.</span></h1>
-        <p class="hero-lead">SOGATTOP SARL accompagne vos projets grâce à des prestations de topographie, de bathymétrie et de traitement de données géospatiales.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#services">Découvrir nos services</a>
-          <a class="button button-outline" href="https://wa.me/24166447496" target="_blank" rel="noopener">Parler à un conseiller</a>
-        </div>
-        <div class="hero-note"><span class="dot"></span> Des prestations adaptées aux projets de construction, d'aménagement et d'infrastructures.</div>
-      </div>
-      <div class="hero-bottom container">
-        <span>TOPOGRAPHIE</span><i></i><span>BATHYMÉTRIE</span><i></i><span>TRAITEMENT DE DONNÉES</span>
-      </div>
-    </section>
+<div class="top"><div class="wrap">
+ <div><span><i>📍</i> Libreville, Gabon</span><a href="https://wa.me/24166447496"><i>💬</i> 66 44 74 96</a><a href="mailto:Abdoulayetraore18@yahoo.fr"><i>✉</i> Abdoulayetraore18@yahoo.fr</a></div>
+ <em>Précision • Expertise • Performance</em>
+</div></div>
 
-    <section class="intro section" id="apropos">
-      <div class="container intro-grid">
-        <div>
-          <p class="eyebrow dark">QUI SOMMES-NOUS ?</p>
-          <h2>Un partenaire technique pour vos projets.</h2>
-        </div>
-        <div class="intro-copy">
-          <p><strong>SOGATTOP SARL</strong> est un bureau d'études orienté vers les travaux topographiques, les levés bathymétriques et l'exploitation des données de terrain.</p>
-          <p>Notre objectif : fournir des informations fiables et structurées pour aider les maîtres d'ouvrage, bureaux d'études, entreprises de BTP et acteurs de l'aménagement à préparer, exécuter et contrôler leurs projets.</p>
-          <a class="text-link" href="#contact">Échangeons sur votre projet <span>→</span></a>
-        </div>
-      </div>
-    </section>
+<header><div class="wrap">
+ <a class="logo" href="#accueil" aria-label="SOGATTOP SARL - accueil">
+  <svg viewBox="0 0 60 60" aria-hidden="true"><ellipse cx="30" cy="32" rx="26" ry="22" fill="none" stroke="#f2a900" stroke-width="4"/><path d="M30 12v8M22 20h16v10H22zM30 30l-9 22M30 30l9 22M30 30v22" stroke="#0d2240" stroke-width="4" fill="none"/></svg>
+  <span><b>SOGATTOP <span>SARL</span></b><small>L’expertise topographique au service de vos projets</small></span>
+ </a>
+ <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+ <nav id="nav" onclick="this.classList.remove('open')">
+  <a class="on" href="#accueil">🏠 Accueil</a>
+  <a href="#entreprise">🏢 Notre Entreprise</a>
+  <a href="#services">⚙ Nos Services</a>
+  <a href="#realisations">🖼 Nos Réalisations</a>
+  <a href="#equipements">🔧 Nos Équipements</a>
+  <a href="#client">👤 Espace Client</a>
+  <a href="#contact">✉ Contact</a>
+ </nav>
+</div></header>
 
-    <section class="services section" id="services">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow dark">NOS DOMAINES D'INTERVENTION</p>
-          <h2>Des compétences complémentaires, du terrain au bureau.</h2>
-          <p>Une offre de services pour accompagner les différentes étapes de vos opérations.</p>
-        </div>
-        <div class="service-grid">
-          <article class="service-card">
-            <div class="service-icon">⌖</div><span class="card-number">01</span>
-            <h3>Topographie</h3>
-            <p>Acquisition et contrôle des données planimétriques et altimétriques pour vos études et travaux.</p>
-            <ul><li>Levés topographiques et plans</li><li>Levé GNSS et polygonales</li><li>Implantation et récolement</li><li>Nivellement et profils</li><li>Suivi et contrôle de travaux</li></ul>
-          </article>
-          <article class="service-card featured">
-            <div class="service-icon">≈</div><span class="card-number">02</span>
-            <h3>Bathymétrie</h3>
-            <p>Mesure des profondeurs et représentation des fonds pour les projets en rivière, plan d'eau et milieu côtier.</p>
-            <ul><li>Levés bathymétriques</li><li>Profils en travers et longitudinaux</li><li>Modèles de fonds et surfaces</li><li>Cartes et plans bathymétriques</li><li>Appui aux projets maritimes et fluviaux</li></ul>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">▦</div><span class="card-number">03</span>
-            <h3>Traitement des données</h3>
-            <p>Organisation, calcul, contrôle et valorisation des données collectées sur le terrain.</p>
-            <ul><li>Calculs et compensation</li><li>Traitement de données GNSS</li><li>MNT, courbes de niveau et cubatures</li><li>Dessin DAO et plans d'exécution</li><li>Exports et rapports techniques</li></ul>
-          </article>
-        </div>
-      </div>
-    </section>
+<main>
+<section class="hero" id="accueil"><div class="wrap">
+ <h1>SOGATTOP <span>SARL</span></h1>
+ <h2>La précision au cœur de <em>vos projets</em></h2>
+ <hr>
+ <p>Votre partenaire en topographie, géodésie, bathymétrie et travaux <strong>BTP</strong>.</p>
+ <div class="btns">
+  <a class="btn g" href="#contact">➜ Demander un Devis</a>
+  <a class="btn o" href="#client">👤 <span>Espace Client<small>(Accès Administrateur)</small></span></a>
+ </div>
+</div></section>
 
-    <section class="process section" id="methodes">
-      <div class="container process-grid">
-        <div>
-          <p class="eyebrow">NOTRE APPROCHE</p>
-          <h2>De la préparation à la livraison des résultats.</h2>
-          <p class="process-lead">Chaque mission est organisée selon les besoins du projet, les contraintes du site et les livrables attendus.</p>
-          <a class="button button-light" href="#contact">Présenter votre besoin</a>
-        </div>
-        <div class="steps">
-          <div class="step"><b>01</b><div><h3>Écoute et préparation</h3><p>Compréhension du besoin, des objectifs, de la zone et des livrables.</p></div></div>
-          <div class="step"><b>02</b><div><h3>Acquisition sur le terrain</h3><p>Organisation des opérations et collecte des mesures adaptées à la mission.</p></div></div>
-          <div class="step"><b>03</b><div><h3>Calcul et traitement</h3><p>Contrôle, calcul, traitement et mise en forme des données recueillies.</p></div></div>
-          <div class="step"><b>04</b><div><h3>Livraison</h3><p>Remise des plans, fichiers numériques et documents convenus avec le client.</p></div></div>
-        </div>
-      </div>
-    </section>
+<section class="sec" id="services"><div class="wrap">
+ <div class="title"><h2>Nos Domaines d’Expertise</h2></div>
+ <div class="grid5">
+  <article class="card"><div class="ph"><img src="images/topographie.jpg" alt="Topographie au Gabon" onerror="this.parentNode.classList.add('empty');this.remove()"></div><h3>Topographie</h3><p>Levés, implantations, nivellement</p></article>
+  <article class="card"><div class="ph"><img src="images/geodesie.jpg" alt="Géodésie et GNSS" onerror="this.parentNode.classList.add('empty');this.remove()"></div><h3>Géodésie &amp; GNSS</h3><p>Levés GPS différentiel, rattachements</p></article>
+  <article class="card"><div class="ph"><img src="images/btp.jpg" alt="Suivi des travaux BTP" onerror="this.parentNode.classList.add('empty');this.remove()"></div><h3>Suivi des Travaux BTP</h3><p>Contrôle et implantation</p></article>
+  <article class="card"><div class="ph"><img src="images/bathymetrie.jpg" alt="Bathymétrie" onerror="this.parentNode.classList.add('empty');this.remove()"></div><h3>Bathymétrie</h3><p>Levés des profondeurs et profils</p></article>
+  <article class="card"><div class="ph"><img src="images/etudes.jpg" alt="Études et conseils" onerror="this.parentNode.classList.add('empty');this.remove()"></div><h3>Études &amp; Conseils</h3><p>Expertise et accompagnement</p></article>
+ </div>
+</div></section>
 
-    <section class="equipment section">
-      <div class="container equipment-grid">
-        <div>
-          <p class="eyebrow dark">NOS MOYENS TECHNIQUES</p>
-          <h2>Des outils adaptés aux exigences du terrain.</h2>
-          <p>Les moyens matériels et logiciels sont mobilisés selon la nature de chaque intervention et la précision attendue.</p>
-        </div>
-        <div class="equipment-list">
-          <div><span>01</span><strong>Stations totales</strong><small>Levé, implantation et contrôle.</small></div>
-          <div><span>02</span><strong>Récepteurs GNSS</strong><small>Positionnement et acquisition de données.</small></div>
-          <div><span>03</span><strong>Niveaux topographiques</strong><small>Mesures altimétriques et nivellement.</small></div>
-          <div><span>04</span><strong>Outils de traitement et DAO</strong><small>Calcul, dessin, modélisation et restitution.</small></div>
-          <div><span>05</span><strong>Équipements bathymétriques</strong><small>Mesure et traitement des profondeurs.</small></div>
-        </div>
-      </div>
-    </section>
+<section class="sec" id="entreprise" style="padding-top:10px"><div class="wrap">
+ <div class="about">
+  <div class="ph"><img src="images/entreprise.jpg" alt="Équipe SOGATTOP SARL" onerror="this.parentNode.classList.add('empty');this.remove()"></div>
+  <div>
+   <h2>À propos de SOGATTOP SARL</h2>
+   <p><strong>SOGATTOP SARL</strong> est une entreprise gabonaise spécialisée dans les travaux topographiques, la géodésie, le génie civil et la bathymétrie. Grâce à une équipe qualifiée et un matériel de pointe, nous vous offrons des prestations de qualité, dans le respect des délais et des normes.</p>
+   <a class="btn g" href="#contact">En savoir plus ›</a>
+  </div>
+ </div>
+ <div class="atouts">
+  <h2>Nos Atouts</h2>
+  <ul>
+   <li><span>✔</span>Expertise<small>confirmée</small></li>
+   <li><span>◎</span>Précision<small>maximale</small></li>
+   <li><span>🤝</span>Engagement<small>qualité</small></li>
+   <li><span>🕒</span>Respect<small>des délais</small></li>
+  </ul>
+ </div>
+</div></section>
 
-    <section class="cta-band">
-      <div class="container cta-content"><div><p class="eyebrow">UN PROJET À ÉTUDIER ?</p><h2>Parlons de vos besoins topographiques.</h2><p>Décrivez votre mission : nous pourrons échanger sur les données nécessaires et les livrables attendus.</p></div><a class="button button-primary" href="https://wa.me/24166447496" target="_blank" rel="noopener">Contacter SOGATTOP <span>→</span></a></div>
-    </section>
+<section class="sec" id="realisations"><div class="wrap">
+ <div class="title"><h2>Nos Réalisations</h2></div>
+ <div class="note"><strong>Pour ajouter vos photos :</strong> placez-les dans le dossier <code>images/</code> sous les noms <code>realisation1.jpg</code> à <code>realisation6.jpg</code> (ou modifiez les lignes ci-dessous). Pour ajouter une photo, copiez simplement un bloc <code>&lt;figure&gt;</code>.</div>
+ <div class="gal">
+  <figure><div class="ph"><img src="images/realisation1.jpg" alt="Réalisation 1 SOGATTOP" onerror="this.parentNode.classList.add('empty');this.remove()"></div><figcaption>Projet 1 – Levé topographique</figcaption></figure>
+  <figure><div class="ph"><img src="images/realisation2.jpg" alt="Réalisation 2 SOGATTOP" onerror="this.parentNode.classList.add('empty');this.remove()"></div><figcaption>Projet 2 – Implantation</figcaption></figure>
+  <figure><div class="ph"><img src="images/realisation3.jpg" alt="Réalisation 3 SOGATTOP" onerror="this.parentNode.classList.add('empty');this.remove()"></div><figcaption>Projet 3 – Bathymétrie</figcaption></figure>
+  <figure><div class="ph"><img src="images/realisation4.jpg" alt="Réalisation 4 SOGATTOP" onerror="this.parentNode.classList.add('empty');this.remove()"></div><figcaption>Projet 4 – Suivi de chantier</figcaption></figure>
+  <figure><div class="ph"><img src="images/realisation5.jpg" alt="Réalisation 5 SOGATTOP" onerror="this.parentNode.classList.add('empty');this.remove()"></div><figcaption>Projet 5 – Géodésie GNSS</figcaption></figure>
+  <figure><div class="ph"><img src="images/realisation6.jpg" alt="Réalisation 6 SOGATTOP" onerror="this.parentNode.classList.add('empty');this.remove()"></div><figcaption>Projet 6 – Étude</figcaption></figure>
+ </div>
+</div></section>
 
-    <section class="contact section" id="contact">
-      <div class="container contact-grid">
-        <div><p class="eyebrow dark">CONTACT</p><h2>Construisons la suite de votre projet.</h2><p>Pour une demande de renseignement ou de devis, contactez notre équipe.</p>
-          <div class="contact-detail"><span class="detail-icon">⌖</span><div><small>LOCALISATION</small><strong>Libreville, Gabon</strong></div></div>
-          <div class="contact-detail"><span class="detail-icon">☎</span><div><small>TÉLÉPHONE / WHATSAPP</small><strong>+241 66 44 74 96</strong></div></div>
-        </div>
-        <div class="contact-panel">
-          <h3>Demander un échange</h3>
-          <p>Le bouton ci-dessous ouvre WhatsApp avec un message prérempli.</p>
-          <a class="button button-primary full" href="https://wa.me/24166447496?text=Bonjour%20SOGATTOP%20SARL%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20vos%20prestations." target="_blank" rel="noopener">Écrire sur WhatsApp ↗</a>
-          <small class="privacy-note">Pour une demande de devis, précisez la localisation, la superficie ou le linéaire, le type de mission et le délai souhaité.</small>
-        </div>
-      </div>
-    </section>
-  </main>
+<section class="sec" id="equipements" style="padding-top:10px"><div class="wrap">
+ <div class="title"><h2>Nos Équipements</h2></div>
+ <div class="eq">
+  <div class="card"><h3>Stations totales</h3><p style="padding:0">Mesures angulaires et de distances de haute précision.</p></div>
+  <div class="card"><h3>Récepteurs GNSS</h3><p style="padding:0">Levés GPS différentiel et rattachements géodésiques.</p></div>
+  <div class="card"><h3>Matériel de bathymétrie</h3><p style="padding:0">Relevé des profondeurs et des profils sur plans d’eau.</p></div>
+  <div class="card"><h3>Niveaux et accessoires</h3><p style="padding:0">Nivellement, implantation et contrôle de chantier.</p></div>
+ </div>
+</div></section>
 
-  <footer class="footer">
-    <div class="container footer-top"><a class="brand brand-footer" href="#accueil"><img class="brand-logo" src="assets/logo-sogattop.svg" alt="Logo SOGATTOP SARL"></a><p>Topographie · Bathymétrie · Traitement de données</p><a href="#accueil">Retour en haut ↑</a></div>
-    <div class="container footer-bottom"><span>© <span id="year"></span> SOGATTOP SARL. Tous droits réservés.</span><span>Libreville, Gabon</span></div>
-  </footer>
-  <script src="script.js"></script>
+<section class="sec" id="client" style="padding-top:10px"><div class="wrap">
+ <div class="title"><h2>Espace Client</h2></div>
+ <div class="card" style="padding:24px;text-align:left;max-width:520px;margin:auto">
+  <p style="padding:0;margin-bottom:12px">Accès réservé aux clients et à l’administrateur.</p>
+  <form onsubmit="event.preventDefault();alert('Espace client bientôt disponible. Contactez-nous pour obtenir vos accès.')">
+   <input type="email" placeholder="Adresse e-mail" aria-label="Adresse e-mail" required>
+   <input type="password" placeholder="Mot de passe" aria-label="Mot de passe" required>
+   <button class="btn g" type="submit">Se connecter</button>
+  </form>
+ </div>
+</div></section>
+
+<section class="sec" id="contact" style="padding-top:10px"><div class="wrap">
+ <div class="title"><h2>Contact &amp; Devis</h2></div>
+ <div class="cform">
+  <div class="cinfo">
+   <p><strong>📍 Adresse :</strong> Libreville, Gabon</p>
+   <p><strong>💬 WhatsApp / Tél. :</strong> <a href="https://wa.me/24166447496">66 44 74 96</a></p>
+   <p><strong>✉ E-mail :</strong> <a href="mailto:Abdoulayetraore18@yahoo.fr">Abdoulayetraore18@yahoo.fr</a></p>
+   <p style="margin-top:18px">Décrivez votre projet : nous vous répondons avec un devis adapté.</p>
+  </div>
+  <form id="f">
+   <input name="nom" placeholder="Votre nom" aria-label="Votre nom" required>
+   <input name="tel" placeholder="Téléphone" aria-label="Téléphone">
+   <textarea name="msg" rows="5" placeholder="Votre projet" aria-label="Votre projet" required></textarea>
+   <button class="btn g" type="submit">Envoyer la demande de devis</button>
+  </form>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="fg">
+  <div class="logo" style="color:#fff"><svg viewBox="0 0 60 60" aria-hidden="true"><ellipse cx="30" cy="32" rx="26" ry="22" fill="none" stroke="#f2a900" stroke-width="4"/><path d="M30 12v8M22 20h16v10H22zM30 30l-9 22M30 30l9 22M30 30v22" stroke="#fff" stroke-width="4" fill="none"/></svg><span><b style="font-size:26px">SOGATTOP <span>SARL</span></b><small style="color:#fff">L’expertise topographique au service de vos projets</small></span></div>
+  <div><h4>Liens Utiles</h4><ul><li><a href="#accueil">Accueil</a></li><li><a href="#entreprise">Notre Entreprise</a></li><li><a href="#services">Nos Services</a></li><li><a href="#realisations">Nos Réalisations</a></li></ul></div>
+  <div><h4>Nous Contacter</h4><ul style="line-height:1.9"><li>Libreville, Gabon</li><li><a href="https://wa.me/24166447496">66 44 74 96</a></li><li><a href="mailto:Abdoulayetraore18@yahoo.fr">Abdoulayetraore18@yahoo.fr</a></li></ul></div>
+  <div><div class="slogan">Ensemble, construisons un avenir avec précision et confiance.</div>
+   <div class="soc"><a href="https://wa.me/24166447496" style="background:#25d366" aria-label="WhatsApp">WA</a><a href="#" style="background:#e62117" aria-label="YouTube">YT</a><a href="#" style="background:#0a66c2" aria-label="LinkedIn">in</a><a href="#" style="background:#1877f2" aria-label="Facebook">f</a></div></div>
+ </div>
+ <div class="copy"><span>© 2026 SOGATTOP SARL. Tous droits réservés.</span><em>Topographie • BTP • Bathymétrie</em></div>
+</div></footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+ e.preventDefault();var d=new FormData(this);
+ var b='Nom : '+d.get('nom')+'\nTéléphone : '+d.get('tel')+'\n\n'+d.get('msg');
+ location.href='mailto:Abdoulayetraore18@yahoo.fr?subject='+encodeURIComponent('Demande de devis')+'&body='+encodeURIComponent(b);
+});
+</script>
 </body>
 </html>
